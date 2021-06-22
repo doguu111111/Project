@@ -10,8 +10,8 @@
 
 <p>ログイン</p>
 <form method="get" action="Login_method">
-			ユーザID  <input type="text" name="id">
-			パスワード  <input type="text" name="pass">
+			ユーザID  <input type="text" name="id"><br>
+			パスワード  <input type="text" name="pass"><br>
 	<button type="submit">ログイン</button>
 </form>
 
