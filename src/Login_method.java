@@ -36,15 +36,16 @@ public class Login_method extends HttpServlet {
 		String id = request.getParameter("id");
 		String pass = request.getParameter("pass");
 		boolean login;
+		
         response.setContentType("text/html; charset=Shift_JIS");
         PrintWriter out = response.getWriter();
 
         try {
-    						Class.forName("org.mariadb.jdbc.Driver").newInstance();
+    						Class.forName("org.mariadb.jdbc.Driver");
      					   Connection conn = DriverManager.getConnection
    					    	    ("jdbc:mysql://localhost/Users", "root", "KCSF");
-     				        String sqlc= "SELECT * FROM usertable WHERE user = ? && pass = ?";
-     				        PreparedStatement val = conn.prepareStatement(sqlc);
+     				        String sql= "SELECT * FROM usertable WHERE user = ? && pass = ?";
+     				        PreparedStatement val = conn.prepareStatement(sql);
      				        val.setString(1,id);
      				        val.setString(2,pass);
      				        ResultSet rs = val.executeQuery();
@@ -54,13 +55,13 @@ public class Login_method extends HttpServlet {
      				        							login = false;
      				        					}
      				        		if(login) {
-     				        		//	RequestDispatcher dispatcher =  request.getRequestDispatcher("MainPage.jsp");
-     				        		//	dispatcher.forward(request, response);
-     				        	        out.println(rs);
+     				        			RequestDispatcher dispatcher =  request.getRequestDispatcher("MainPage.jsp");
+     				        			dispatcher.forward(request, response);
+     				        	        
      				        		}else{
-     				        		//	RequestDispatcher dispatcher =  request.getRequestDispatcher("Login.jsp");
-     				        		//	dispatcher.forward(request, response);
-     				        	        out.println(rs);
+     				        			RequestDispatcher dispatcher =  request.getRequestDispatcher("Login.jsp");
+     				        			dispatcher.forward(request, response);
+     				        	       
      				        							}
      				        
      				        
