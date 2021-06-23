@@ -19,7 +19,16 @@
 </head>
 <body>
 <form method="get" action="Logout">
+
 	<button type="submit">ログアウト</button>
+</form>
+<form method="get" action="SNS.jsp">
+
+	<button type="submit">SNS</button>
+</form>
+<form method="get" action="Game">
+
+	<button type="submit">ゲーム</button>
 </form>
 </body>
 </html>
