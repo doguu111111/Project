@@ -9,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import java.sql.*;
 /**
  * Servlet implementation class Login_method
@@ -31,11 +33,13 @@ public class Login_method extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String id = request.getParameter("id");
 		String pass = request.getParameter("pass");
 		boolean login;
+		HttpSession session = request.getSession(false);
 		
         response.setContentType("text/html; charset=Shift_JIS");
         PrintWriter out = response.getWriter();
@@ -49,12 +53,16 @@ public class Login_method extends HttpServlet {
      				        val.setString(1,id);
      				        val.setString(2,pass);
      				        ResultSet rs = val.executeQuery();
+     				        
      				        if(rs.next()) {
      				        			login = true;
      				        					}else {
      				        							login = false;
      				        					}
      				        		if(login) {
+     				        			session.setAttribute("logined", "OK");
+     				        			session.setAttribute("id", id);
+     				        			session = request.getSession(true);
      				        			RequestDispatcher dispatcher =  request.getRequestDispatcher("MainPage.jsp");
      				        			dispatcher.forward(request, response);
      				        	        
