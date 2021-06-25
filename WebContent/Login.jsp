@@ -5,6 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>ようこそ</title>
+<style>
+ body {
+  color: gray;
+}
+</style>
 </head>
 <body>
 
@@ -14,6 +19,5 @@
 			パスワード  <input type="text" name="pass"><br>
 	<button type="submit">ログイン</button>
 </form>
-
 </body>
 </html>

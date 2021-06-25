@@ -39,9 +39,12 @@ public class Sns_method extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		String mutter = request.getParameter("mutter");
 		String id = (String)session.getAttribute("id");
+	 response.setContentType("text/html; charset=UTF-8");
+     byte[] byteData = mutter.getBytes("ISO_8859_1");
+     mutter = new String(byteData, "UTF-8");
 
 		try {
-			if(mutter==null) {
+			if(mutter=="null") {
 			     RequestDispatcher dispatcher =  request.getRequestDispatcher("SNS.jsp");
 			     dispatcher.forward(request, response);
 			}
@@ -54,7 +57,7 @@ public class Sns_method extends HttpServlet {
 	        val.setString(1,id);
 	        val.setString(2,mutter);
 	        ResultSet rs = val.executeQuery();
-		       mutter =null;
+		       mutter ="null";
 			     rs.close();
 			     val.close();
  			       RequestDispatcher dispatcher =  request.getRequestDispatcher("SNS.jsp");

@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
+    <%
+    String logined = (String)session.getAttribute("logined");
+    String id = (String)session.getAttribute("id");
+	if(logined==null){
+		%><jsp:forward page="Login.jsp" /><%
+	}
+	
+	
+%>
 <!DOCTYPE html>
 <html>
 <head>
