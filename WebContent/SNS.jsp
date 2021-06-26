@@ -21,6 +21,9 @@
 			つぶやき内容  <input type="text" name="mutter"><br>
 	<button type="submit">つぶやく</button>
 	</form>
+	<form method="get" action="MainPage.jsp">
+	<button type="submit">戻る</button>
+		</form>
 	    <%
 	    try{
 		Class.forName("org.mariadb.jdbc.Driver");

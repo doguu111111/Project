@@ -30,5 +30,9 @@
 
 	<button type="submit">ゲーム</button>
 </form>
+<form method="get" action="Kakin.jsp">
+
+	<button type="submit">課金</button>
+</form>
 </body>
 </html>

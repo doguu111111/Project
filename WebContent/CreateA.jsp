@@ -4,24 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ようこそ</title>
-<style>
- body {
-  color: gray;
-}
-</style>
+<title>CreateAccount</title>
 </head>
 <body>
 
-<p>ログイン</p>
-<form method="get" action="Login_method">
+<p>アカウント作成</p>
+<form method="get" action="CreateA_Method">
 			ユーザID  <input type="text" name="id"><br>
 			パスワード  <input type="text" name="pass"><br>
-	<button type="submit">ログイン</button>
-</form>
-<p>アカウント作成</p>
-<form method="get" action="CreateA.jsp">
 	<button type="submit">アカウント作成</button>
 </form>
+
 </body>
 </html>
