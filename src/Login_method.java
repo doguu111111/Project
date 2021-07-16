@@ -63,6 +63,32 @@ public class Login_method extends HttpServlet {
      				        			session.setAttribute("logined", "OK");
      				        			session.setAttribute("id", id);
      				        			session = request.getSession(true);
+     				        			
+     				        			
+     				       	     String sql2= "SELECT * FROM greattrial WHERE user = ?";
+     				   	        PreparedStatement val2 = conn.prepareStatement(sql2);
+     				   	        val2.setString(1,id);
+     				   	        ResultSet rs2 = val2.executeQuery();
+     				   	        
+     				        			if(rs2.next()) {
+     				        		
+     				        			}else {
+     				        				
+ 				        					String sql1= "insert into greattrial (user,defcon) values(?,?)";
+ 	     		     				        PreparedStatement val1 = conn.prepareStatement(sql1);
+ 	     		     				        val1.setString(1,id);
+ 	     		     				        val1.setInt(2,0);
+ 	     		     				        ResultSet rs1 = val1.executeQuery();
+     				        			}
+     				        			
+     				        			
+     				        			
+     				        			
+     				        			
+     				        			
+
+     				        			
+     				        			
      				        			RequestDispatcher dispatcher =  request.getRequestDispatcher("MainPage.jsp");
      				        			dispatcher.forward(request, response);
      				        	        
@@ -81,6 +107,7 @@ public class Login_method extends HttpServlet {
         }catch (Exception e){
             log("Exception:" + e.getMessage());
         			}
+        
         
         
         

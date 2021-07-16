@@ -26,7 +26,7 @@
 
 	<button type="submit">SNS</button>
 </form>
-<form method="get" action="Game">
+<form method="get" action="Gamecata.jsp">
 
 	<button type="submit">ゲーム</button>
 </form>
