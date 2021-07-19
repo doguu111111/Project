@@ -73,7 +73,7 @@ body {
 </form>
 </div>
 <div class = "C">
-<form method="get" action="Game">
+<form method="get" action="Gamecata.jsp">
 
 	<button type="submit">ゲーム</button>
 </form>

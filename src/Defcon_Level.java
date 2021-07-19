@@ -67,7 +67,10 @@ public class Defcon_Level extends HttpServlet {
 	     			  RequestDispatcher dispatcher =  request.getRequestDispatcher("Fighter1.jsp");
 	          		dispatcher.forward(request, response);
 				}
-				
+				if(defcon==2) {
+	     			  RequestDispatcher dispatcher =  request.getRequestDispatcher("Fighter2.jsp");
+	          		dispatcher.forward(request, response);
+				}
 				
 	        
 		}catch(ClassNotFoundException e){
