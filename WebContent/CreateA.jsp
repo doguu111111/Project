@@ -9,7 +9,7 @@
 <body>
 
 <p>アカウント作成</p>
-<form method="get" action="CreateA_Method">
+<form method="get" action="Kakunin.jsp">
 			ユーザID  <input type="text" name="id"><br>
 			パスワード  <input type="text" name="pass"><br>
 	<button type="submit">アカウント作成</button>

@@ -50,13 +50,6 @@ p:before {
 }
 </style>
 <body>
-<p>S N S</p>
-	<form method="get" action="Sns_method">
-			<div class ="A">
-			つぶやく内容  <input type="text" name="mutter"><br>
-			</div>
-	<button type="submit">つぶやく</button>
-	</form>
 	    <%
 	    try{
 		Class.forName("org.mariadb.jdbc.Driver");

@@ -60,7 +60,7 @@ public class Sns_method extends HttpServlet {
 		       mutter ="null";
 			     rs.close();
 			     val.close();
- 			       RequestDispatcher dispatcher =  request.getRequestDispatcher("SNS.jsp");
+ 			       RequestDispatcher dispatcher =  request.getRequestDispatcher("Chat.jsp");
  			     dispatcher.forward(request, response);
 		}catch (ClassNotFoundException e){
             log("ClassNotFoundException:" + e.getMessage());

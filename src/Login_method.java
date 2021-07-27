@@ -58,6 +58,7 @@ public class Login_method extends HttpServlet {
      				        			login = true;
      				        					}else {
      				        							login = false;
+     				        							
      				        					}
      				        		if(login) {
      				        			session.setAttribute("logined", "OK");
@@ -93,7 +94,7 @@ public class Login_method extends HttpServlet {
      				        			dispatcher.forward(request, response);
      				        	        
      				        		}else{
-     				        			RequestDispatcher dispatcher =  request.getRequestDispatcher("Login.jsp");
+     				        			RequestDispatcher dispatcher =  request.getRequestDispatcher("Error.jsp");
      				        			dispatcher.forward(request, response);
      				        	       
      				        							}

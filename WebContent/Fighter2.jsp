@@ -78,7 +78,7 @@ html, body {
 <script type="text/javascript">
 var Changefunc = function(){
 
-		document.getElementById('OP').innerHTML = '<iframe class ="youtube" src="http://localhost:8080/Project_git/ProjectThree/index.html" width="1000" height="700" scrolling="no" frameborder="0"></iframe>';
+		document.getElementById('OP').innerHTML = '<iframe class ="youtube" src="http://localhost:8080/Project_git/ProjectThree_debug/index.html" width="1000" height="700" scrolling="no" frameborder="0"></iframe>';
 		
 }
 </script>

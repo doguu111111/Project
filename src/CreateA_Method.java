@@ -65,7 +65,7 @@ public class CreateA_Method extends HttpServlet {
 		        val.setString(1,id);
 		        val.setString(2,pass);
 		        ResultSet rs = val.executeQuery();
-			      RequestDispatcher dispatcher =  request.getRequestDispatcher("Login.jsp");
+			      RequestDispatcher dispatcher =  request.getRequestDispatcher("Kanryou.jsp");
 			      dispatcher.forward(request, response);
 			        		}else{
 			        			out.print("そのIDは使われています");

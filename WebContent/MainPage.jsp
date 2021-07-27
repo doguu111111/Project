@@ -67,7 +67,7 @@ body {
 </form>
 </div>
 <div class ="B">
-<form method="get" action="SNS.jsp">
+<form method="get" action="Chat.jsp">
 
 	<button type="submit">SNS</button>
 </form>
