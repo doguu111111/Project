@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,13 +54,17 @@ p:before {
 }
 </style>
 <body>
-	    <%
+<%
+	    
+	    String roomid = (String)session.getAttribute("roomid");
+	    
 	    try{
 		Class.forName("org.mariadb.jdbc.Driver");
 		   Connection conn = DriverManager.getConnection
 	    	    ("jdbc:mysql://localhost/Users", "root", "KCSF");
-	        String sql= "SELECT * FROM sns order by id desc";
+	        String sql= "SELECT * FROM sns where roomid = ? order by id desc";
 	        PreparedStatement val = conn.prepareStatement(sql);
+	        val.setString(1,roomid);
 	        ResultSet rs = val.executeQuery();
 
 		while(rs.next()){

@@ -8,8 +8,11 @@
 </head>
 <body>
 
+
+
+
 <p>ルーム作成</p>
-	<form method="get" action="Create_Room_method">
+	<form method="get" action="Create_Room">
 			ルーム名  <input type="text" name="roomname"><br>
 	<button type="submit">作成</button>
 	</form>

@@ -54,7 +54,7 @@ public class Create_Room extends HttpServlet {
 		        val.setString(1,roomid);
 		        val.setString(2,roomname);
 		        ResultSet rs = val.executeQuery();
-			      RequestDispatcher dispatcher =  request.getRequestDispatcher("Room.jsp");
+			      RequestDispatcher dispatcher =  request.getRequestDispatcher("Chat.jsp");
 			      dispatcher.forward(request, response);
 
 		        

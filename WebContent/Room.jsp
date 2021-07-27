@@ -32,6 +32,16 @@ import= "javax.servlet.http.*"
 </head>
 <body>
 
+
+
+<form method="get" action="Create_Room.jsp">
+
+	<button type="submit">ルーム作成</button>
+</form>
+
+
+
+
 	    <%
 	    
 	    
@@ -56,21 +66,16 @@ import= "javax.servlet.http.*"
 			roomid=new String(roomid.getBytes("8859_1"),"Shift_JIS");
 			roomname=new String(roomname.getBytes("8859_1"),"Shift_JIS");
 			
-			//out.println("<p>");
-			//out.print("ルーム" + roomid +":" + roomname);
+			out.println("<p>");
+			out.print("ルーム" + roomid +":" + roomname);
+			out.print("<form method='get' action='Select_Room'>");
+
 			
-			//out.print("<form method='get' action='Select_Room'>");
+			//out.print("<input type='submit' name ='roomid'  value="+roomid+">入室</button>");
 			
-			//out.print("<input type='submit'name=" +  roomid + "value=入室>");
+			out.print("<input type='submit' name ='roomid'  value="+roomid+">入室</button>");
 			
-			
-		 
-				
-			//out.print("</form>");
-		
-			
-			
-			
+			out.print("</form>");
 			out.println("</p>");
 		}
 		  rs.close();
@@ -83,6 +88,8 @@ import= "javax.servlet.http.*"
             log("Exception:" + e.getMessage());
         			}
 		%>
+
+				
 
 
 

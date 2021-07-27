@@ -39,6 +39,7 @@ public class Sns_method extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		String mutter = request.getParameter("mutter");
 		String id = (String)session.getAttribute("id");
+		String roomid = (String)session.getAttribute("roomid");
 	 response.setContentType("text/html; charset=UTF-8");
      byte[] byteData = mutter.getBytes("ISO_8859_1");
      mutter = new String(byteData, "UTF-8");
@@ -52,10 +53,11 @@ public class Sns_method extends HttpServlet {
 		Class.forName("org.mariadb.jdbc.Driver");
 		   Connection conn = DriverManager.getConnection
 	    	    ("jdbc:mysql://localhost/Users", "root", "KCSF");
-	        String sql= "insert into sns (user,mutter) values(?,?)";
+	        String sql= "insert into sns (user,mutter,roomid) values(?,?,?)";
 	        PreparedStatement val = conn.prepareStatement(sql);
 	        val.setString(1,id);
 	        val.setString(2,mutter);
+	        val.setString(3, roomid);
 	        ResultSet rs = val.executeQuery();
 		       mutter ="null";
 			     rs.close();
