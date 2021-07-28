@@ -46,7 +46,7 @@ public class Sns_method extends HttpServlet {
 
 		try {
 			if(mutter=="null") {
-			     RequestDispatcher dispatcher =  request.getRequestDispatcher("SNS.jsp");
+			     RequestDispatcher dispatcher =  request.getRequestDispatcher("Chat.jsp");
 			     dispatcher.forward(request, response);
 			}
 		

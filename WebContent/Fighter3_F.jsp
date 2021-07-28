@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Civilwar</title>
+<title>軍閥</title>
 <style>
 
 .main{
@@ -119,6 +119,11 @@ body{
 }
 
 
+.Strong{
+
+color: #990033;
+
+}
 
 	
 
@@ -144,26 +149,36 @@ var Changefunc = function(){
 	<div id = "Civil">
 				<iframe class ="Battle"	width="0" height="0" src="http://localhost:8080/Project_git/Source/Gun_Battle.mp"></iframe>
 			<div class="box">
-  		<p>帝国内戦</p>
+  		<p>軍閥</p>
   		<div class="main">
-				総統の死後、帝国は大混乱に陥った。<br>
-				総統が正当な後継者を指名したのにも関わらず、<br>帝国内における強力な派閥が自分たちの未来像で国家を導こうと互いに武装蜂起を開始した。<br>
-				今や帝国は、それぞれの指導者に忠誠を誓う部隊によって引き裂かれている。<br>状況の深刻さはまだ分からないが、帝国は中央集権の完全な崩壊に直面しているか、<br>
-				あるいは既に崩壊しているかもしれない。<br>
+				軍閥の一つであるオムスクは、カルヴィシェフの志に賛同する「Black League(黒衛団)」によって統治されている。<br>
+				Black Leagueは、反帝国感情と復讐主義の見解を共有する超国粋主義者の集まりである。<br>
+				<br>反帝国感情の教義の下で、「The Great Trial」の理論が存在している。<br>
+				かつて、その翼で世界を陰に覆い、全てを焼き尽くす巨大な龍として巨大な国家が台頭していた。<br>
+				それから帝国がやってきて、隠れ家から龍を追い出し、巨大な龍の切れ端が隠れ家を取り戻そうとした試みも、<br>全て失敗した。<br>
+				周りには、失敗したイデオロギーの擁護者が住んでいる。そう、<br>
+				<div class = "Strong">
+				<br>
+				<br>共産主義者<br>
+				<br>
+				<br>
+				</div>
+				彼らの大義はもはや存在しない。<br>
+				私達は彼らに、その事実を啓蒙しなければならない。<br>
 				
-				<br>帝国からの爆撃部隊はモスコーヴィエン国家弁務官区の飛行場から軍閥国家に向けて気が滅入るほどの頻度で飛び立ち、<br>
-				見えるものすべてを爆撃し、人々の生活のほぼ全てに深刻な悪影響を与えていた。<br>
-				自由飛行士団の航空部隊がわずかな好機も逃さずに爆撃部隊を迎撃せんと奮戦していた。<br>
-				今、帝国の爆撃は止まり、青い空が顔を覗かせ、一時の平和が訪れている。<br>
+				帝国の復讐の為に、準備をしなければならない。<br>
+				我らに、失うものは何もない。<br>
+				<br>
 				
 				
-				<br>しかし、帝国に打ち砕かれた軍閥国家は行動を起こそうとしている。
 				
+				<br>The Great Trial Awaits.<br>
+				<br>
 
   					
 
 				</div>
-				<a href="SuperEvent_Empire_CivilWar.jsp" target="_parent" class="button" >確かなる帝国の終焉だ。</a>
+				<a href="SuperEvent_Empire_CivilWar.jsp" target="_parent" class="button" >進め。</a>
 				</div>
 				
 	</div>

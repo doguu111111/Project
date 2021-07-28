@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Create_Room
@@ -46,7 +47,7 @@ public class Create_Room extends HttpServlet {
 			Class.forName("org.mariadb.jdbc.Driver");
 			   Connection conn = DriverManager.getConnection
 		    	    ("jdbc:mysql://localhost/Users", "root", "KCSF");
-			   
+			   HttpSession session = request.getSession(true);
 			   
 
 		        String sql= "insert into  room(roomid,roomname) values(?,?)";
@@ -54,7 +55,8 @@ public class Create_Room extends HttpServlet {
 		        val.setString(1,roomid);
 		        val.setString(2,roomname);
 		        ResultSet rs = val.executeQuery();
-			      RequestDispatcher dispatcher =  request.getRequestDispatcher("Chat.jsp");
+		        session.setAttribute("roomid", roomid);
+			      RequestDispatcher dispatcher =  request.getRequestDispatcher("Room.jsp");
 			      dispatcher.forward(request, response);
 
 		        

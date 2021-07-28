@@ -136,7 +136,7 @@ body{
 <p>帝国内戦</p>
 <iframe class ="youtube" width="800" height="480" src="https://www.youtube.com/embed/sVseAYeS8IA?autoplay=1&mute=0&playsinline=1&loop=0&playlist=sVseAYeS8IA&controls=0&disablekb=1&rel=0"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <div class="content">
-<a href="DEFCON.jsp"class="button2" >始まった。</a>
+<a href="DEFCON.jsp"class="button2" >So it begins</a>
 </div>
 <div class="container">
 </div>
